@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 200vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 5px 100px; 
+    background: rgba(255, 255, 255, 0.521);
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: inherit;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+header.sticky .logo,
+header.sticky ul li a{
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes welcome{
+    0%{color:white;}
+    20%{color:rgb(8, 167, 230)}
+    40%{color: lime;}
+    60%{color:red}
+    80%{color: rgb(233, 250, 3);}
+    100%{color: salmon;}
+}
+
+#vid{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+#pg1{
+    position: relative;
+    background-color: rgba(180, 168, 168, 0.897);
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 6em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgba(117, 16, 3, 0.945);
+    font-weight: bolder;
+    text-shadow: 3px 2px 5px rgb(240, 240, 229) ;
+    border-radius: 20px;
+}
+
+
+#pg1:hover{
+      animation-name:welcome;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      text-shadow: rgb(233, 229, 21);
+}
+
+ul {position:-webkit-sticky;
+    position: sticky;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+li{  
+    display:inline;
+   float:left;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: rgba(31, 9, 228, 0.347);
+    
+    min-height: 50px;
+    margin-top: 2%;
+}
+
+.navbar:hover{
+    background-color:rgba(12, 5, 82, 0.356);
+    
+}
+
+li a{  display:block;
+    color:rgb(243, 190, 17);
+    text-align: center;
+    padding:10px;
+    word-spacing: 10px;
+    font-size: 1.5em;
+    text-decoration:none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+
+li:hover{
+    background-color: rgb(233, 233, 236);
+    min-height:50px;
+}
+
+.about{
+    float:right;
+}
+
+/* #btn1{
+    position:absolute;
+    background-color: rgb(138, 10, 127);
+    border-radius: 50%;
+    min-height: 3.5em;
+    min-width: 10em; 
+    font-size: 1.5em;
+    color:whitesmoke;
+    margin-top:5%;
+    margin-bottom: 10%;
+   margin-left: 40%;
+   padding: 15px 25px;
+   text-align: center;
+   outline:none;
+   border:none;
+   box-shadow: 0 9px rgba(240, 226, 24, 0.678);
+}
+#btn1:hover{
+    background-color: rgb(77, 7, 77);
+}
+#btn1:active{
+background-color:rgb(46, 3, 63) ;
+box-shadow: 0 5px rgba(229, 233, 8, 0.582);
+transform: translateY(5px);
+}
+.butn{
+    margin-top:5%;
+    margin-bottom: 1%;
+} */
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    object-position: center;
+    margin-top: 49%;
+    margin-left:49%;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+

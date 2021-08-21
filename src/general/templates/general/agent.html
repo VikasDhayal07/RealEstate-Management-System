@@ -1,0 +1,129 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agent</title>
+	<link rel="stylesheet" href="{% static 'general/agent.css' %}">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  {% comment %} <script src="jagent.js"></script> {% endcomment %}
+</head>
+<body>
+
+ <header>
+    <a href="#" class="logo">
+    <img src="{% static 'general/bricks.png' %}" alt="Logo">
+    </a>
+    <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">SERVICES</a></li>
+    <li><a href="#">LOGIN</a></li>
+    </ul>
+    </header>
+    <section class="banner"></section> 
+
+    <div class="upper">
+
+<div class="wrapper">
+    <div class="left">
+        <img src="http://dlmk.in/images/ch.png" 
+        alt="user" width="150">
+        {% for i,j,k,l,m,n ,o,p,q,r in agentdata%}
+        <h2>{{j}}</h2>
+         <p>{{i}}</p>
+        
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <p>{{l}}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Phone</h4>
+                    <p>{{k}}</p>
+              </div>
+            </div>
+        </div>
+      
+      <div class="projects">
+            <h3>Deals</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>Deals Completed</h4>
+                    <p>{{n}}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Net Sale</h4>
+                    <p>{{r}}</p>
+              </div>
+            </div>
+        </div>
+
+
+         <div class="status">
+            <h3>Status</h3>
+            <div class="status_data">
+                 <div class="data">
+                    <h4>To Sell</h4>
+                    <p>{{p}}</p>                      
+                 </div>
+                 <div class="data">
+                   <h4>For Rent</h4>
+                    <p>{{o}}</p>
+              </div>
+            </div>
+        </div>
+      
+       {% endfor %}
+    </div>
+</div>
+    
+
+
+    </div>  
+    
+    <div class="lower">
+    <div class="inner-lower">
+    <div class="grid">
+    {% for a,b,c,d in carddata  %}
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Rome" />
+          <div class="card-content">
+            <h1 class="card-header">Property Id: {{a}}</h1>
+            <p class="card-text">
+              Owner ID: {{b}}
+            </p>
+            <p class="card-text">
+              Date Sold: {{d}}
+            </p>
+            <p class="card-text">
+              Status: {{c}}
+            </p>
+            <button class="card-btn" id="bun" style="background-color:rgb(16, 80, 163); color: honeydew;">Update <span>&rarr;</span></button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+
+
+
+ 
+    
+  
+ <script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'general/reg.css' %}"/>
+    <title>Register Now!</title>
+</head>
+<body>
+    <header>
+    <a href="#" class="logo">
+    <img src="{% static 'general/bricks.png' %}" alt="Logo">
+    </a>
+    <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">SERVICES</a></li>
+    <li><a href="#">CONTACT</a></li>
+    </ul>
+    </header>
+
+    <section class="banner"></section>    
+    <h1 id="re">
+        Register Today!
+    </h1>
+<form  action='/regis/' method = "POST"> {% csrf_token%}
+    <label>Name:</label><br>
+    <input class="inbox" type="text" placeholder="Name" name="name"/>
+    {% comment %} <input  class="inbox"type="text" placeholder="Last Name"/> {% endcomment %}
+    <br>
+    <label>Phone Number:</label><br>
+    <input class = "inbox" type="number" placeholder="Phone Number" name="number"/>
+    <br>
+    <label>Email-id:</label><br>
+    <input  class="inbox" type="email" placeholder="Email" name="email"/>
+    <br>
+    <label>Password:</label><br>
+    <input  class="inbox" type="password" placeholder="Password" name="pwd"/>
+    <br>
+
+    {% comment %} <label>Address:</label><br>
+    <input  class="inbox" type="text" value="Address" name="address"/><br>
+    <input  class="inbox" type="text" value="City" name="city" />
+    <input  class="inbox" type="text" value="Province" name="province"/>
+    <input  class="inbox" type="number" placeholder="Postal code" value="Postal Code"/> {% endcomment %}
+    <br> 
+    {% comment %} <label>Type:     </label><br>
+    <select class="inbox" list="d" name="type" value="Select" placeholder="select">
+    <datalist>
+    <option value="Default">Select...</option>
+    <option value="Buyer">Buyer</option>
+    <option value="Owner">Owner</option>
+    <option value="Agent">Agent</option>
+    </datalist><br>
+    </select> {% endcomment %}
+    <br>
+
+    <input type="checkbox"/>
+    <list id="tnc">I Agree to the terms and conditions of the website</list>
+    <br>
+    <input type="submit" value="Submit"/>
+
+
+</form>
+
+
+<script type="text/javascript">
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+</script>
+</body>
+</html>

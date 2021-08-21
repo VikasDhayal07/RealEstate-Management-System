@@ -1,0 +1,60 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="{% static 'general/style.css' %}"/>
+
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="{% static 'general/logas.js' %}"></script>
+
+
+</head>
+
+
+
+<body style="background-color:rgb(2, 48, 48)">
+  <div>  <video autoplay muted loop id="vid">
+        <source src="{% static 'general/videoplayback.mp4' %}" type="video/mp4">
+    </video>
+      
+
+  
+
+<header>
+    <a href="#" class="logo">
+    <img src="{% static 'general/bricks.png' %}" alt="Logo">
+    </a>
+    <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">SERVICES</a></li>
+    <li><a href="#">CONTACT</a></li>
+    </ul>
+</header>
+    <section class="banner"></section>        
+
+
+   <h1 id="pg1" style="text-align: center;">
+    Glasses and Bricks
+ </h1> 
+   
+
+   <div class="dropdown" style="object-position: center;margin-left:41%;">
+  <button onclick="myFunction()" class="dropbtn" id="logas" style="min-width: 55%;">Login As</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="../loga/">Agent</a>
+    <a href="../logb/">Buyer</a>
+    <a href="../logo/">Owner</a>
+  </div>
+</div>
+
+</div>
+
+</body>
+
+   </html>

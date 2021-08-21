@@ -1,0 +1,143 @@
+body{
+    background-image: url('owner_back.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#dp{
+    max-width: 8%;
+    max-height: 8%;
+    margin-left: 2%;
+    float: inline-start;
+}
+.profile{
+    margin-top: 5%;
+    margin-left: 5%;
+     min-height: 8%;
+     min-width: 8%;
+     max-height: 100%;
+     max-width: 100%;
+    
+ }
+
+ 
+ul {position:-webkit-sticky;
+    position: sticky;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+li{  
+    display:inline;
+   float:left;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.411);
+    
+    min-height: 50px;
+    margin-top: 0%;
+}
+
+.navbar:hover{
+    background-color:rgba(12, 5, 82, 0.356);
+    
+}
+
+li a{  display:block;
+    color:rgb(243, 190, 17);
+    text-align: center;
+    padding:10px;
+    word-spacing: 10px;
+    font-size: 1.5em;
+    text-decoration:none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+
+li:hover{
+    background-color: rgb(233, 233, 236);
+    min-height:50px;
+}
+
+#hd{
+    font-size: 2.5em;
+    font-family: 'Gabriola','SignPainter',sans-serif;
+    color: mintcream;
+    margin-left: 2%;
+}
+
+#details{
+    text-align:start;
+    
+}
+
+.prop{
+    max-height: 8%;
+    max-width:8%;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -ms-flex-align: baseline;
+    margin-top:2%;
+}
+
+
+.flex-prop{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -ms-flex-align: baseline;
+}
+
+.pd{
+    max-width: 10%;
+    max-height: 15%;
+    margin-left: 2%;
+}
+.p{
+    margin-top: 5%;
+    margin-left: 5%;
+     min-height: 10%;
+     min-width: 15%;
+     max-height: 80%;
+     max-width: 20%;
+    
+}
+button{
+    margin-left: 10%;
+    background-color: rgba(190, 178, 10, 0.884);
+    margin: none;
+    border: none;
+    padding: 2%;
+    border-radius: 20%;
+    text-align:right;
+    box-shadow: rgb(233, 233, 236);
+}
+
+.pro{
+    margin-top: 5%;
+    margin-left: 0%;
+     min-height: 8%;
+     min-width: 8%;
+     max-height: 100%;
+     max-width: 100%;
+    
+ }
+
+ #btn{
+     margin-left: 15%;
+     padding: 4%;
+     text-align: center;
+     background-color: seagreen;
+     border: none;
+     color: seashell;
+     font-size: x-large; 
+     margin-top: 55%;
+ }

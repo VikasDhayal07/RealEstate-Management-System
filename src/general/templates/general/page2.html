@@ -1,0 +1,74 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Owner</title>
+    <link rel="stylesheet" href="{% static 'general/owner.css' %}"/>
+</head>
+
+<body>
+    <div>
+        <h1 id="hd">
+            <b>
+                Bricks and Glasses
+            </b>
+        </h1>
+    </div>
+    <div class="navbar">
+        <ul>        
+             <li ><a href="#">Home</a></li>
+             <li style="float: right;"><a href="https://www.google.com " target="_blank">Contribute</a></li>           
+             <li style="float: right;"><a href="page3.html">About Us</a></li>
+             <li style="float: right;"><a href="mixkit-bike-ride-around-the-city-3119.mp4">Contact</a></li>
+             <li style="float: right;"><a href="../regis">Register</a></li>
+             
+         </ul>
+    </div>
+    {% for a,b,c,d,e in ownerdata%}
+    <div class="flex-container" >
+        <div id="dp" style="margin-left: 3%;">
+            <img class= "profile" src="{% static 'general/spike.png' %}" alt= "Profile">
+        </div>
+        <div style="margin-left: 10%; background-color: rgba(255, 255, 255, 0.575); min-width: 70%">
+            <h3>Name:  {{b}}                           </h3><br>
+            <h3>Email-id:   {{d}}                            </h3><br>
+            <h3>Contact No.:  {{c}}                         </h3>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for a,b,c,d,e,f,g in propdata%}
+    <div class="flex-container" >
+        <div style="margin-left: 3%; background-color: rgba(10, 82, 110, 0.575); min-width: 70%">
+            <h3>PropertyID: {{a}}         </h3><br>
+            <h3>BHK: {{b}}                     </h3><br>
+            <h3>Address: {{c}}, {{d}}, {{e}}</h3><br>
+            <h3>Features: {{f}}                          </h3>
+        </div>
+        <div id="dp" style="margin-left: 2%; min-inline-size: 20%; min-height: max-content;border-color: rgba(72, 221, 231, 0.575); border-style:solid; border-width: 2em;">
+            <img class="pro" src="{% static 'general/r-architecture-2gDwlIim3Uw-unsplash.jpg' %}" alt="Profile">
+            <button><input type="file" value="Add Images" ></button>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for a,b,c,d,e in ownerdata%}
+    <div class="flex-container" style="-ms-flex-align: center;" >
+        <div id="dp" style="margin-left:3%;margin-top:7%">
+            <img class= "profile" src="{% static 'general/pony.png' %}" alt= "Profile">
+        </div>
+        <div style="margin-left: 4%; background-color: rgba(138, 13, 117, 0.575);min-width:60%; max-width: 60%">
+            <h2>Agent Assigned:</h2><br>
+            <h3>Agent ID                                 </h3><br>
+            <h3>Agent Name</h3>
+            <h3>Email-id:                               </h3><br>
+            <h3>Contact No.:                           </h3>
+        </div>
+        <div>
+            <input id="btn" type="button" value="Request agent change"  >
+        </div>
+    </div>
+   {% endfor %}
+</body>
+</html>

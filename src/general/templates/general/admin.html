@@ -1,0 +1,88 @@
+{% load static%}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'general/admin.css' %}" >
+    </head>
+    <body>
+
+    <header>
+    <a href="#" class="logo">
+        <img src="{% static 'general/bricks.png' %}" alt="Logo">
+    </a>
+
+    <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">SERVICES</a></li>
+    <li><a href="#">CONTACT</a></li>
+    </ul>
+    </header>
+
+    <section class="banner">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='title'>
+    </section> 
+
+{% for instance in object_list%}
+
+    <div class="upper">  
+
+    <div class="wrapper">
+    <div class="left">
+        <img src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/man5-512.png" 
+             alt="user" width="100">
+        <h3>{{ instance.aname }}</h3>
+        <p>{{ instance.contact_no }}</p>
+        <p>{{ instance.email }}</p>
+        <p>Net Sale: {{ instance.net_sale }}</p>
+        <p>Rating: {{ instance.rating }}</p>
+
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Property Details</h3>
+
+            {% for i in prop_list %}
+            {% comment %} {% for key, value in context.items %}
+                {% if key != 'object_list'%}
+                    {% for i in value %} {% endcomment %}
+                
+                <div class="info_data">
+                 <div class="data">
+                    <h4>Property Id</h4>
+                    <p>{{ i.propertyid }}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Type</h4>
+                    <p>{{ i.type }}</p>
+                </div>
+                <div class="data">
+                    <h4>Selling Price</h4>
+                    <p>Rs {{i.sell_price}}</p>
+                </div>
+                <div class="data">
+                   <h4>Date Sold</h4>
+                    <p>{{ i.date_sold }}</p>
+                </div>
+            </div>
+                    {% comment %} {% endfor %}
+                {% endif %} {% endcomment %}
+            {% endfor %}
+        </div>
+       
+    </div>
+    </div>
+
+    </div>  
+
+{% endfor %}
